@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7188467589821761867}
   - component: {fileID: 1640608530599794068}
   - component: {fileID: 3009775986060362577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 189455420155118552}
   - component: {fileID: 716634137665661742}
   - component: {fileID: 3009775986060362589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,9 +207,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3336716719134368944}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Casa
-  m_TagString: Untagged
+  m_TagString: Casa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 2667739023525297674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.032755, y: -0.18292809, z: -1.3149805}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1891442296833015765}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 4632898716306167729}
   - component: {fileID: 1314424365908654046}
   - component: {fileID: 3009775986060362588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 325620585451010267}
   - component: {fileID: 4790908104104419658}
   - component: {fileID: 3009775986060362578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 729423800265867}
   - component: {fileID: 6868539245198566550}
   - component: {fileID: 3009775986060362579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

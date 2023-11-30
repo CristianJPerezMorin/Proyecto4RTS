@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Terreno
+  - Casa
+  - Arbol
+  - Arbol2
+  - Especial
   layers:
   - Default
   - TransparentFX
@@ -12,7 +16,7 @@ TagManager:
   - Terreno
   - Water
   - UI
-  - 
+  - Estructura
   - 
   - 
   - 

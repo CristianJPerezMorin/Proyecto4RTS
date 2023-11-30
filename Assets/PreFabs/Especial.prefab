@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1900205286469096710}
   - component: {fileID: 3168535268372657689}
   - component: {fileID: 4565918999926476798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Manche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 6213686391144442387}
   - component: {fileID: 5553608056754415206}
   - component: {fileID: 6802426699590697597}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pommeau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 3109757702446737879}
   - component: {fileID: 5785362706454326453}
   - component: {fileID: 2102743890541468599}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,9 +276,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4095986885207156762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Especial
-  m_TagString: Untagged
+  m_TagString: Especial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 3718863826924221088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.1875234, y: -0.17143011, z: -4.5852194}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 911548796160406399}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 8456398201972196833}
   - component: {fileID: 26217543925651774}
   - component: {fileID: 4565918999926476797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 1783654142089188641}
   - component: {fileID: 3056142999457902148}
   - component: {fileID: 5953529022019549400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Garde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
