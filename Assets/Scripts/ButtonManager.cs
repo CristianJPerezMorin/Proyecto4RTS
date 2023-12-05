@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
+    CamaraAcciones camOptions;
+
     public GameObject MenuOpciones;
     public GameObject MenuCamara;
     public GameObject MenuCrear;
@@ -20,6 +22,9 @@ public class ButtonManager : MonoBehaviour
     public bool tree2Create { get; set; }
     public bool houseCreate { get; set; }
     public bool specialCreate { get; set; }
+    public bool moveStructure { get; set; }
+    public bool decreaseScale { get; set; }
+    public bool increaseScale { get; set; }
 
     private void Start()
     {
@@ -29,6 +34,9 @@ public class ButtonManager : MonoBehaviour
         tree2Create = false;
         houseCreate = false;
         specialCreate = false;
+        moveStructure = false;
+        decreaseScale = false;
+        increaseScale = false;
     }
 
     public void CamaraMode()
@@ -87,6 +95,11 @@ public class ButtonManager : MonoBehaviour
         MenuEditar.SetActive(true);
     }
 
+    public void EditStructure()
+    {
+        moveStructure = true;
+    }
+
     public void ExitEditMode()
     {
         editMode = false;
@@ -141,6 +154,30 @@ public class ButtonManager : MonoBehaviour
         tree2Create = false;
         houseCreate = false;
         specialCreate = true;
+    }
+
+    public void DecreaseScale()
+    {
+        decreaseScale = true;
+    }
+
+    public void IncreaseScale()
+    {
+        increaseScale = true;
+    }
+
+    public Vector3 DecreaseScaleAction(Vector3 scaleOld)
+    {
+        decreaseScale = false;
+
+        return new Vector3(scaleOld.x - 0.5f, scaleOld.y - 0.5f, scaleOld.z - 0.5f);
+    }
+
+    public Vector3 IncreaseScaleAction(Vector3 scaleOld)
+    {
+        increaseScale = false;
+
+        return new Vector3(scaleOld.x + 0.5f, scaleOld.y + 0.5f, scaleOld.z + 0.5f);
     }
 }
 

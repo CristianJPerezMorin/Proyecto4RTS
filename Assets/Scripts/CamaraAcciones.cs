@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UIElements;
 
 public class CamaraAcciones : MonoBehaviour
 {
@@ -25,8 +26,13 @@ public class CamaraAcciones : MonoBehaviour
 
     int layerMask = 1 << 6;
 
+    GameObject structureSelected;
+    public bool editStructure { get; set;}
+
     void Start()
     {
+        editStructure = false;
+
         _buttonManager = controller.GetComponent<ButtonManager>();
     }
 
@@ -79,7 +85,57 @@ public class CamaraAcciones : MonoBehaviour
 
         if (_buttonManager.editMode)
         {
+            if (Input.GetMouseButtonDown(1))
+            {
+                Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
 
+                if (Physics.Raycast(rayo, out hit, Mathf.Infinity))
+                {
+                    if(hit.collider.gameObject.tag != "Terreno")
+                    {
+                        structureSelected = hit.collider.gameObject.transform.parent.gameObject;
+                        editStructure = true;
+                    }
+                }
+            }
+        }
+
+        if (editStructure)
+        {
+            if (_buttonManager.moveStructure)
+            {
+                if (Input.GetMouseButtonDown(1))
+                {
+                    Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+
+                    if (Physics.SphereCast(rayo, 20, out hit, Mathf.Infinity))
+                    {
+                        if (hit.collider.gameObject.tag == "Terreno")
+                        {
+                            structureSelected.transform.position = hit.point;
+                            _buttonManager.moveStructure = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (_buttonManager.decreaseScale)
+        {
+            if (editStructure)
+            {
+                structureSelected.transform.localScale = _buttonManager.DecreaseScaleAction(structureSelected.transform.localScale);
+            }
+        }
+
+        if (_buttonManager.increaseScale)
+        {
+            if (editStructure)
+            {
+                structureSelected.transform.localScale = _buttonManager.IncreaseScaleAction(structureSelected.transform.localScale);
+            }
         }
 
         if (_buttonManager.deleteMode)
@@ -91,7 +147,7 @@ public class CamaraAcciones : MonoBehaviour
 
                 if (Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
                 {
-                    Destroy(hit.collider.gameObject);
+                    Destroy(hit.transform.parent.gameObject);
                 }
             }
         }
@@ -119,10 +175,5 @@ public class CamaraAcciones : MonoBehaviour
         {
             Instantiate(prefabSpecial, position, rotation);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawRay(Camera.main.ScreenPointToRay(Input.mousePosition));
     }
 }
