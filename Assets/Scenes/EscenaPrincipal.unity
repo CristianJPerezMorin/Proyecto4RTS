@@ -1926,6 +1926,11 @@ MonoBehaviour:
   MenuInformacion: {fileID: 1107559067}
   MenuEliminar: {fileID: 1581426448}
   MenuEditar: {fileID: 1011905159}
+  botonMover: {fileID: 315872360}
+  botonArbol: {fileID: 1617731417}
+  botonArbol2: {fileID: 960356358}
+  botonCasa: {fileID: 944950038}
+  botonEspecial: {fileID: 1067062349}
 --- !u!4 &706845200
 Transform:
   m_ObjectHideFlags: 0

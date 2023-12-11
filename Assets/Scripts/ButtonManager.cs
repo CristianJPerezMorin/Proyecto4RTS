@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class ButtonManager : MonoBehaviour
     public GameObject MenuInformacion;
     public GameObject MenuEliminar;
     public GameObject MenuEditar;
+
+    public Button botonMover;
+    public Button botonArbol;
+    public Button botonArbol2;
+    public Button botonCasa;
+    public Button botonEspecial;
 
     public bool camaraMode { get; set; }
     public bool createMode { get; set; }
@@ -38,6 +45,55 @@ public class ButtonManager : MonoBehaviour
         decreaseScale = false;
         increaseScale = false;
     }
+
+    void Update()
+    {
+        if (moveStructure)
+        {
+            botonMover.image.color = Color.green;
+        }
+        else
+        {
+            botonMover.image.color = Color.white;
+        }
+
+        if (treeCreate)
+        {
+            botonArbol.image.color = Color.green;
+        }
+        else
+        {
+            botonArbol.image.color = Color.white;
+        }
+
+        if (tree2Create)
+        {
+            botonArbol2.image.color = Color.green;
+        }
+        else
+        {
+            botonArbol2.image.color = Color.white;
+        }
+
+        if (houseCreate)
+        {
+            botonCasa.image.color = Color.green;
+        }
+        else
+        {
+            botonCasa.image.color = Color.white;
+        }
+
+        if (specialCreate)
+        {
+            botonEspecial.image.color = Color.green;
+        }
+        else
+        {
+            botonEspecial.image.color = Color.white;
+        }
+    }
+
 
     public void CamaraMode()
     {
@@ -97,7 +153,14 @@ public class ButtonManager : MonoBehaviour
 
     public void EditStructure()
     {
-        moveStructure = true;
+        if (moveStructure)
+        {
+            moveStructure = false;
+        }
+        else
+        {
+            moveStructure = true;
+        }
     }
 
     public void ExitEditMode()

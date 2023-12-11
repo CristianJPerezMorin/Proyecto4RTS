@@ -115,7 +115,6 @@ public class CamaraAcciones : MonoBehaviour
                         if (hit.collider.gameObject.tag == "Terreno")
                         {
                             structureSelected.transform.position = hit.point;
-                            _buttonManager.moveStructure = false;
                         }
                     }
                 }
