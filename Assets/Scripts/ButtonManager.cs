@@ -243,15 +243,27 @@ public class ButtonManager : MonoBehaviour
         return new Vector3(scaleOld.x + 0.5f, scaleOld.y + 0.5f, scaleOld.z + 0.5f);
     }
 
-    public void DestroyAllObjects()
+    public void DestroyAllArbol()
     {
         GameObject[] listaEstructura = GameObject.FindGameObjectsWithTag("Arbol");
         foreach (var item in listaEstructura) { GameObject.Destroy(item); }
-        listaEstructura = GameObject.FindGameObjectsWithTag("Arbol2");
+    }
+
+    public void DestroyAllArbol2()
+    {
+        GameObject[] listaEstructura = GameObject.FindGameObjectsWithTag("Arbol2");
         foreach (var item in listaEstructura) { GameObject.Destroy(item); }
-        listaEstructura = GameObject.FindGameObjectsWithTag("Casa");
+    }
+
+    public void DestroyAllCasa()
+    {
+        GameObject[] listaEstructura = GameObject.FindGameObjectsWithTag("Casa");
         foreach (var item in listaEstructura) { GameObject.Destroy(item); }
-        listaEstructura = GameObject.FindGameObjectsWithTag("Especial");
+    }
+
+    public void DestroyAllEspecial()
+    {
+        GameObject[] listaEstructura = GameObject.FindGameObjectsWithTag("Especial");
         foreach (var item in listaEstructura) { GameObject.Destroy(item); }
     }
 }
